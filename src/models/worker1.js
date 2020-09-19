@@ -28,10 +28,14 @@ const workerSchema = new mongoose.Schema({
     longitude:{
         type:Number,
         required:true
+    },
+    available:{
+        type:Boolean,
+        required:true
     }
     
 })
-const Worker = new mongoose.model('Worker', workerSchema)
+const Worker = new mongoose.model('Worker1', workerSchema)
 
 module.exports = Worker
 

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const commentSchema = new mongoose.Schema({
+const facilitySchema = new mongoose.Schema({
     facilityName:{
         type: String,
         required: true
@@ -19,6 +19,6 @@ const commentSchema = new mongoose.Schema({
     }
 })
 
-const Comment = new mongoose.model('Comment', commentSchema)
+const Facility = new mongoose.model('Facility', facilitySchema)
 
-module.exports = Comment
+module.exports = Facility

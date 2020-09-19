@@ -5,14 +5,16 @@ const app = express()
 const port = process.env.port || 3002
 const publicDirectoryPath = path.join(__dirname, '../public')
 app.use(express.static(publicDirectoryPath))
-const userRouter = require('./routers/user')
-const postRouter = require('./routers/post')
-const commentRouter = require('./routers/comment')
+const equipmentRouter = require('./routers/equipment')
+const facilityRouter = require('./routers/facility')
+const workerRouter = require('./routers/worker')
+const workOrderRouter = require('./routers/workOrder')
 
 app.use(express.json())
-app.use(userRouter)
-app.use(postRouter)
-app.use(commentRouter)
+app.use(equipmentRouter)
+app.use(facilityRouter)
+app.use(workerRouter)
+app.use(workOrderRouter)
 
 app.get('/upload', (req,res) => {
     res.send("hi")

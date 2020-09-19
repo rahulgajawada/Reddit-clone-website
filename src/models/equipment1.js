@@ -35,6 +35,6 @@ const equipmentSchema = new mongoose.Schema({
     }
     
 })
-const Worker = new mongoose.model('Worker', workerSchema)
+const Equipment = new mongoose.model('Worker', equipmentSchema)
 
-module.exports = Worker
+module.exports = Equipment

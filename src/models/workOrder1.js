@@ -49,6 +49,6 @@ const workOrderSchema = new mongoose.Schema({
 
 // })
 
-const User = mongoose.model('Task', userSchema)
+const WorkOrder = mongoose.model('WorkOrder', workOrderSchema)
 
-module.exports = User
+module.exports = WorkOrder
