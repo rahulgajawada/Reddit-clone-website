@@ -18,6 +18,13 @@ const userSchema = new mongoose.Schema({
     avatar:{
         type: Buffer
     }
+    // ,
+    // password:{
+    //     type: String,
+    //     required: true,
+    //     trim: true,
+    //     minlength: 7
+    // }
     // tokens:{
     //     token:{
     //         type:String,
@@ -29,7 +36,7 @@ const userSchema = new mongoose.Schema({
 userSchema.virtual('posts', {
     ref: 'Post',
     localField: '_id',
-    foreignField: 'owner'
+    foreignField: 'CreatedBy'
 
 })
 

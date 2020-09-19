@@ -9,11 +9,19 @@ const postSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    owner:{
+    CreatedBy:{
         type: mongoose.Schema.Types.ObjectId,
-        required: true,
         ref: 'User'
+    },
+    subreddit:{
+        type:String,
+        required: true,
     }
+    // ,
+    // upvotes:{
+    //     type:Number,
+    //     default: 0
+    // }
 
 })
 

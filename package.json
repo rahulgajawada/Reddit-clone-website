@@ -4,14 +4,32 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.20.0",
+    "babel-cli": "6.24.1",
+    "babel-core": "6.25.0",
+    "babel-loader": "7.1.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "6.24.1",
     "express": "^4.17.1",
+    "fetch": "^1.1.0",
+    "live-server": "^1.2.1",
     "mongoose": "^5.9.28",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "webpack": "^4.44.1",
+    "webpack-dev-server": "^3.11.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack-cli": "^3.3.12"
+  },
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "serve": "live server public/",
+    "build": "webpack",
+    "dev-server": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC"
