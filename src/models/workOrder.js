@@ -1,24 +1,34 @@
 const mongoose = require('mongoose')
 
-const userSchema = new mongoose.Schema({
-    name:{
+const workOrderSchema = new mongoose.Schema({
+    facility:{
         type:String,
         required:true,
         trim:true
     },
-    email:{
+    equipment:{
         type:String,
         required:true,
         trim:true
     },
-    age:{
+    equipmentID:{
         type:Number,
         required: true
     },
-    avatar:{
-        type: Buffer
+    priority:{
+        type: Number
+    },
+    timeToComplete:{
+        type: Number,
+        required: true
+    },
+    submissionTimeStamp:{
+        type: String,
+        required: true
     }
-    // ,
+})
+
+  // ,
     // password:{
     //     type: String,
     //     required: true,
@@ -31,15 +41,14 @@ const userSchema = new mongoose.Schema({
     //         required:true
     //     }
     // }
-})
 
-userSchema.virtual('posts', {
-    ref: 'Post',
-    localField: '_id',
-    foreignField: 'CreatedBy'
+// userSchema.virtual('posts', {
+//     ref: 'Post',
+//     localField: '_id',
+//     foreignField: 'CreatedBy'
 
-})
+// })
 
-const User = mongoose.model('User', userSchema)
+const User = mongoose.model('Task', userSchema)
 
 module.exports = User
